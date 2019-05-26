@@ -2,3 +2,15 @@ bottleneck/train/*
 bottleneck/validation/*
 output/best-weights*
 dataset_prediction/crops/*
+fashion_data/*
+dataset/*
+logs/*
+fashion_data
+output/*
+.idea/*
+.vscode/*
+*.pyc
+*.7z
+bottleneck/*
+*.swp
+# predict

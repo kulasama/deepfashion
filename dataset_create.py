@@ -1,4 +1,4 @@
-#!/usr/bin/python
+
 
 '''
 list_category_cloth.txt

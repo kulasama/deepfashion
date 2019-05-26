@@ -102,7 +102,7 @@ def save_bottleneck():
                     ## Save bottleneck file
                     btl_save_file_name = btl_path + train_val + '/btl_' + train_val + '_' + class_name + '.' + str(index).zfill(7) + '.npy'
                     logging.info('btl_save_file_name {}'.format(btl_save_file_name))
-                    np.save(open(btl_save_file_name, 'w'), bottleneck_features_train_class)
+                    np.save(open(btl_save_file_name, 'wb'), bottleneck_features_train_class)
                     for name in images_name_list:
                         f_image.write(str(name) + '\n')
 
@@ -158,8 +158,9 @@ def train_model():
 
     # Load bottleneck files to create train set
     train_data = []
+    print(btl_train_names)
     for index, btl_name in enumerate(btl_train_names):
-        temp = np.load(open(btl_name))
+        temp = np.load(open(btl_name, "rb"))
         train_data.append(temp)
 
     train_data = np.array(train_data)
@@ -204,7 +205,7 @@ def train_model():
     # Load bottleneck files to create validation set
     val_data = []
     for index, btl_name in enumerate(btl_val_names):
-        temp = np.load(open(btl_name))
+        temp = np.load(open(btl_name,"rb"))
         val_data.append(temp)
 
     val_data = np.array(val_data)
