@@ -3,13 +3,12 @@
 ### Setup Environment
 ```sh
 # Virtual environment (optional)
-sudo apt install -y virtualenv
 
 # Tensorflow (optional)
-sudo apt-get install python-pip python-dev python-virtualenv # for Python 2.7
-virtualenv --system-site-packages tensorflow121_py27_gpu # for Python 2.7
-source tensorflow121_py27_gpu/bin/activate
-pip install --upgrade tensorflow-gpu  # for Python 2.7 and GPU
+sudo apt-get install python-dev libhdf5-dev libblas-dev  liblapack-dev
+conda create -n deepfashion python=3.7
+source activate deepfashion
+conda install tensorflow-gpu keras  # for Python 2.7 and GPU
 
 # Dependencies
 sudo apt install -y python-tk
