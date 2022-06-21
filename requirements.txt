@@ -12,7 +12,7 @@ Markdown==2.6.8
 matplotlib==2.0.2
 mock==2.0.0
 networkx==2.3
-numpy==1.16.3
+numpy==1.22.0
 olefile==0.44
 opencv-python==4.1.0.25
 pandas==0.24.2
